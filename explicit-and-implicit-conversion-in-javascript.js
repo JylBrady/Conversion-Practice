@@ -19,14 +19,30 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let num = 2;
+let strNum = String(num); //converts number to string
+let result = ("5 - " + strNum); //converts to show result as a string
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+
+let isValid = Boolean(false); //removes quotation marks to prevent reading "false" as truthy
 if (isValid) {
     console.log("This is valid!");
-}
+};
 
 let age = "25";
-let totalAge = age + 5;
+let numAge = Number(age);  //converts age to a number value
+let totalAge = numAge + 5;  //uses numAge instead of age so it will calculate
 console.log("Total Age: " + totalAge);
+
+let earned;
+if (Boolean(earned)) {  //example of implicit type conversion / boolean -- until earned is defined patron will be prompted to ask how to earn points.
+  console.log("Good job earning library points!");
+} else {
+  console.log("Ask a librarian how you can start earning library points!");
+};
+
+
+let numberOne = 20;
+let numberTwo = 25;
+console.log (String(numberOne) + String(numberTwo));  // example of explicit conversion two numbers into a string of text
